@@ -7,7 +7,7 @@ namespace exercise_11
         public static void Main(string[] args)
         {
             int dayCount = 200;
-            string hoursToLunch = "3.5";
+            double hoursToLunch = 3.5;
             string statement = "It sure is!";
 
             // DO NOT TOUCH THESE!
