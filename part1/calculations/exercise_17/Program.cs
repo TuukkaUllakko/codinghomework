@@ -21,7 +21,7 @@ namespace exercise_17
 
       //The program sums the given numbers together
       int sum = first + second;
-      Console.WriteLine(sum);
+      Console.WriteLine("The sum is " + sum);
 
     }
   }
