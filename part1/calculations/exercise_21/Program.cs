@@ -19,7 +19,7 @@ namespace exercise_21
       //User input for the second integer
       double second = Convert.ToDouble(Console.ReadLine());
 
-      //Calculates the average as a double
+      //Calculates the average as a double and shows the answer
       Console.WriteLine("The average is " + (first + second) / 2);
 
     }
