@@ -7,7 +7,18 @@ namespace exercise_24
     public static void Main(string[] args)
     {
 
-      // Write your code here:
+      //Asks the user for integer
+      Console.WriteLine("Your speed:");
+      //User input for the speed
+      int speed = Convert.ToInt32(Console.ReadLine());
+
+      //Conditional
+      if (speed > 120)
+      {
+          //Prints Speeding! if integer over 120
+          Console.WriteLine("Speeding!");
+
+      }
       
     }
   }
