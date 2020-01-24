@@ -6,7 +6,19 @@ namespace exercise_34
   {
     public static void Main(string[] args)
     {
-      // Write your code here:
+      //Creates the "loop block"
+      while (true)
+      {
+        Console.WriteLine("Do you want to continue?");
+        string answer = Console.ReadLine();
+
+        if (answer == "no")
+        {
+          break;
+
+        }
+        
+      }
 
     }
   }
