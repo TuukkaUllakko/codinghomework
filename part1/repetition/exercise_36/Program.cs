@@ -27,7 +27,7 @@ namespace exercise_36
         }
         else
         {
-          Console.WriteLine(Math.Pow(number, 2)); //Math.Pow used for exponent, for raising to power!
+          Console.WriteLine(Math.Pow(number, 2)); //Math.Pow used for exponent, for raising to power
 
         }
 
