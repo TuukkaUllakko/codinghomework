@@ -7,8 +7,12 @@ namespace exercise_41
     public static void Main(string[] args)
     {
 
-      // Write your code here:
+      //Asks the user for the integer
+      int number = Convert.ToInt32(Console.ReadLine());
       
+      
+      //Prints it out in its second power
+      Console.WriteLine(Math.Pow(number, 2));
     }
   }
 }
