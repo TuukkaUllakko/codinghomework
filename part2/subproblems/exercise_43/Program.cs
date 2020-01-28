@@ -6,7 +6,20 @@ namespace exercise_43
   {
     public static void Main(string[] args)
     {
-      // Write your code here:
+      //Reads the integer from user
+      int number = Convert.ToInt32(Console.ReadLine());
+
+      //Starts the if block
+      if (number < 0)
+      {
+        Console.WriteLine(number * -1);
+
+      }
+      else
+      {
+        Console.WriteLine(number);
+  
+      }
       
     }
   }
