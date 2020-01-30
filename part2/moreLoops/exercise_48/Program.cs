@@ -27,12 +27,12 @@ namespace exercise_48
           
           if (number % 2 == 0)
           {
-            even = even + 1;
+            even++;
 
           }
           else
           {
-            odd = odd + 1;
+            odd++;
 
           }
 
