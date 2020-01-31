@@ -13,7 +13,7 @@ namespace exercise_56
     // Write your method here:
     public static string Word()
     {
-      string hello = "bepis";
+      string hello = "test";
       return hello;
 
     }
