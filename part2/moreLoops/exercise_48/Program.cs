@@ -9,16 +9,16 @@ namespace exercise_48
 
       Console.WriteLine("Give numbers:"); 
       
-      double sum = 0;
-      double amount = 0;
-      double odd = 0;
-      double even = 0;
+      int sum = 0;
+      int amount = 0;
+      int odd = 0;
+      int even = 0;
 
       
       
       while (true)
       {
-        double number = Convert.ToDouble(Console.ReadLine());
+        int number = Convert.ToInt32(Console.ReadLine());
         
         if (number != -1)
         {
@@ -43,7 +43,7 @@ namespace exercise_48
           Console.WriteLine("Thx! Bye!");
           Console.WriteLine("Sum: " + sum);
           Console.WriteLine("Numbers: " + amount);
-          Console.WriteLine("Average: " + (sum / amount));
+          Console.WriteLine("Average: " + ((double)sum / amount));
           Console.WriteLine("Even: " + even);
           Console.WriteLine("Odd: " + odd);
           break;
