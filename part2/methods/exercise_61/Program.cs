@@ -46,7 +46,6 @@ namespace exercise_61
     {
       int variable = 0;
       int add = 2;
-      int addstump = height + add;
       while (variable < height)
       {
         
@@ -58,7 +57,7 @@ namespace exercise_61
           variable++;
           PrintStars(variable);
           variable--;
-          continue;
+          
 
         }
         else if (variable >= 3)
@@ -67,7 +66,7 @@ namespace exercise_61
           PrintSpaces(height - variable);
           PrintStars(variable + add);
           add++;
-          continue;
+          
 
         }
 
