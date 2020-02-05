@@ -13,6 +13,7 @@ namespace exercise_66
         string input = Console.ReadLine();
         if (input == "")
         {
+          Console.WriteLine(list[list.Count - 1]);
           break;
         }
         list.Add(input);
