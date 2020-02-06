@@ -33,10 +33,10 @@ namespace exercise_72
       Console.WriteLine("Smallest number: " + smallest); //After the loop ends, it tells the smallest number.
       for (int index = 0; index < list.Count; index++) //Starts the loop for finding the indexes for this/these smallest number(s).
       {
-        if (list[index] == smallest)
+        if (list[index] == smallest) //If the number at this very index is equal to the smallest we determined earlier, it prints the sentence telling the index it's at.
         {
           Console.WriteLine("Found at index: " + index);
-
+          //Repeat this until all numbers have been checked by the loop, then the program ends.
         }
 
       }
