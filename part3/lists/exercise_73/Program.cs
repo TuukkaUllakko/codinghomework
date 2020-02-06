@@ -8,6 +8,7 @@ namespace exercise_73
     public static void Main(string[] args)
     {
       List<int> list = new List<int>();
+      int sum = 0;
       while (true)
       {
         int input = Convert.ToInt32(Console.ReadLine());
@@ -16,7 +17,10 @@ namespace exercise_73
           break;
         }
         list.Add(input);
+        sum = sum + input;
       }
+      
+      Console.WriteLine("Sum: " + sum);
 
     }
   }
