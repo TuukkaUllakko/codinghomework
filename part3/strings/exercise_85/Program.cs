@@ -9,11 +9,12 @@ namespace exercise_85
     {
       Console.WriteLine("Enter username:");
       string username = Console.ReadLine();
+      Console.WriteLine("Enter password:");
+      string password = Console.ReadLine();
+      
       if (username == "alex")
       {
-        Console.WriteLine("Enter password:");
-        string passalex = Console.ReadLine();
-        if (passalex == "sunshine")
+        if (password == "sunshine")
         {
           Console.WriteLine("You have successfully logged in!");
         }
@@ -23,11 +24,10 @@ namespace exercise_85
         }
 
       }
-      if (username == "emma")
+      
+      else if (username == "emma")
       {
-        Console.WriteLine("Enter password:");
-        string passemma = Console.ReadLine();
-        if (passemma == "haskell")
+        if (password == "haskell")
         {
           Console.WriteLine("You have successfully logged in!");
         }
@@ -35,6 +35,11 @@ namespace exercise_85
         {
           Console.WriteLine("Incorrect username or password!");
         }
+      }
+      
+      else
+      {
+        Console.WriteLine("Incorrect username or password!");
       }
 
     }

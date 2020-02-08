@@ -7,7 +7,13 @@ namespace exercise_86
   {
     public static void Main(string[] args)
     {
+      string input = Console.ReadLine();
+      string[] pieces = input.Split(" ");
 
+      for (int i = 0; i < pieces.Length; i++)
+      {
+        Console.WriteLine(pieces[i]);
+      }
 
     }
   }
