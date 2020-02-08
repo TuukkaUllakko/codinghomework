@@ -7,6 +7,7 @@ namespace exercise_91
   {
     public static void Main(string[] args)
     {
+      string name = "emptynow";
       int oldest = 0; //A variable we will need to determine the oldest of the given ages.
       while (true) //Starts a loop asking for questions.
       {
@@ -21,9 +22,10 @@ namespace exercise_91
         if (age > oldest)
         {
           oldest = age;
+          name = parts[0];
         }
       }
-      Console.WriteLine("Age of the oldest: " + oldest); //Writes the oldest age given, which is saved as the variable in the beginning.
+      Console.WriteLine("Name of the oldest: " + name); //Writes the oldest age given, which is saved as the variable in the beginning.
 
 
     }
