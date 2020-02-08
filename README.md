@@ -2251,3 +2251,208 @@ Banana: price 1.1: 13 pcs
 
 The output above is based on the product being assigned the name banana, with a price of 1.1, and a quantity of 13 .
 
+#### Exercise_99
+
+This exercise consists of multiple sections. Each section corresponds to one exercise point.
+
+The exercise template comes with a partially executed class DecreasingCounter:
+
+```cs
+using System;
+
+namespace exercise_99
+{
+  public class DecreasingCounter
+  {
+    private int value;   // a variable that remembers the value of the counter
+
+    public DecreasingCounter(int initialValue)
+    {
+      this.value = initialValue;
+    }
+
+    public void PrintValue()
+    {
+      Console.WriteLine("value: " + this.value);
+    }
+
+    public void decrement()
+    {
+      // write the method implementation here
+      // the aim is to decrement the value of the counter by one
+    }
+
+    // and the other methods go here
+  }
+}
+```
+
+The following is an example of how the main program uses the decreasing counter:
+
+```cs
+public static void Main(string[] args)
+{
+  DecreasingCounter counter = new DecreasingCounter(10);
+  counter.PrintValue();
+
+  counter.Decrement();
+  counter.PrintValue();
+
+  counter.Decrement();
+  counter.PrintValue();
+}
+```
+
+```console
+value: 10
+value: 9
+value: 8
+```
+
+##### Section 1 : Implementation of the **Decrement() method**
+
+Implement the **Decrement()** method in the class body in such a way that it decrements the value variable of the object it's being called on by one. Once you're done with the **Decrement()** method, the main program of the previous example should work to produce the example output.
+
+##### Section 2 : The counter's value cannot be negative
+
+Improve the **Decrement()** in such a way that the counter's value never becomes negative. This means that if the value of the counter is 0, it cannot be decremented. A conditional statement is useful here.
+
+```cs
+public static void Main(string[] args)
+{
+
+  DecreasingCounter counter = new DecreasingCounter(2);
+  counter.PrintValue();
+
+  counter.Decrement();
+  counter.Decrement();
+  counter.PrintValue();
+
+  counter.Decrement();
+  counter.PrintValue();
+}
+```
+
+```console
+value: 2
+value: 0
+value: 0
+```
+
+##### Section 3: Resetting the counter value
+
+Create the method **public void Reset()** for the counter that resets the value of the counter to 0. For example:
+
+```cs
+public static void Main(string[] args)
+{
+
+  DecreasingCounter counter = new DecreasingCounter(20);
+  counter.PrintValue();
+
+  counter.Reset();
+  counter.PrintValue();
+}
+```
+
+```console
+value: 20
+value: 0
+```
+
+#### Exercise_100
+
+Create the class **Debt** that has double-typed instance variables of **balance** and **interestRate**. The balance and the interest rate are passed to the constructor as parameters **public Debt(double initialBalance, double initialInterestRate)**.
+
+In addition, create the methods **public void PrintBalance()** and **public void WaitOneYear()** for the class. The method PrintBalance prints the current balance, and the WaitOneYear method grows the debt amount.
+
+The debt is increased by multiplying the balance by the interest rate.
+
+The class should do the following:
+
+```cs
+public static void Main(string[] args)
+{
+
+  Debt mortgage = new Debt(120000.0, 1.01);
+  mortgage.PrintBalance();
+
+  mortgage.WaitOneYear();
+  mortgage.PrintBalance();
+
+  // Wait 20 years
+  int years = 0;
+  while (years < 20)
+  {
+    mortgage.WaitOneYear();
+    years = years + 1;
+  }
+
+  mortgage.PrintBalance();
+}
+```
+
+The example above illustrates the development of a mortgage with an interest rate of one percent.
+
+Prints:
+
+```console
+120000
+121200
+147887.0328416936
+```
+
+### Exercise_101
+
+Create a class called **Dalmatian**. The dalmatian has instance variables **string name** and **int spots**. Both are set in the **public Dalmatian(string name, int spots)** constructor. Also, give the variables ability for get and set:
+**Make the variables public rather than private, and add { get; set; } on the declaring lines!**
+
+```cs
+Dalmatian spotty = new Dalmatian("Spot", 306);
+Console.WriteLine(spotty.name + " is a very good dog. He has " + spotty.spots + " darker spots in his fur");
+```
+
+```console
+Spot is a very good dog. He has 306 darker spots in his fur
+```
+
+#### Exercise_102
+
+Create the class **Gauge**. The gauge has the instance **public int value**, a **constructor without parameters** (sets the initial value of the meter variable to 0), and also the following three methods:
+
+- Method **public void Increase()** grows the value instance variable's value by one. It does not grow the value beyond five.
+- Method **public void Decrease()** decreases the value instance variable's value by one. It does not decrease the value to negative values.
+- Method **public bool Full()** returns **True** if the instance variable value has the value five. Otherwise, it returns **False**.
+
+Also, give the value ability for get and set:
+**Make the value public rather than private, and add { get; set; } on the declaring lines!**
+
+An example of the class in use.
+
+```cs
+public static void Main(string[] args)
+{
+  Gauge g = new Gauge();
+
+  while (!g.Full())
+  {
+    Console.WriteLine("Not full! Value: " + g.value);
+    g.Increase();
+  }
+
+  Console.WriteLine("Full! Value: " + g.value);
+  g.Decrease();
+  Console.WriteLine("Not full! Value: " + g.value);
+}
+```
+
+```console
+Not full! Value: 0
+Not full! Value: 1
+Not full! Value: 2
+Not full! Value: 3
+Not full! Value: 4
+Full! Value: 5
+Not full! Value: 4
+```
+
