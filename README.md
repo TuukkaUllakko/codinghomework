@@ -2111,7 +2111,7 @@ In this exercise you'll be asked for the length of the names. You can find out t
 ```cs
 string word = "equisterian";
 int length = word.Length;
-Console.WriteLine("The length of the word" + word + " is " + length);
+Console.WriteLine("The length of the word " + word + " is " + length);
 ```
 
 ```console
@@ -2131,3 +2131,84 @@ After that the program prints the longest name and the highest age. If multiple 
 Longest name: sebastian 
 Highest age: 11
 ```
+
+# Part 4
+
+## Object Oriented Programming
+
+#### Exercise_93
+
+The exercise template comes with a ready-made class named Account. The Account object represents a bank account that has balance (i.e. one that has some amount of money in it). The accounts are used as follows:
+
+```cs
+Account heikkisAccount = new Account("Heikki's account", 100.00);
+Account heikkisSwissAccount = new Account("Heikki's account in Switzerland", 1000000.00);
+
+Console.WriteLine("Intial state");
+Console.WriteLine(heikkisAccount);
+Console.WriteLine(heikkisSwissAccount);
+
+heikkisAccount.Withdrawal(20);
+Console.WriteLine("The balance of Heikki's account is now: " + heikkisAccount.balance);
+heikkisSwissAccount.Deposit(200);
+Console.WriteLine("The balance of Heikki's other account is now: " + heikkisSwissAccount.balance);
+
+Console.WriteLine("End state");
+Console.WriteLine(heikkisAccount);
+Console.WriteLine(heikkisSwissAccount);
+```
+
+Write a program that 
+- creates an account with a balance of 100.0, 
+- deposits 20.0 in it, 
+- and finally prints the balance. 
+
+```console
+120
+```
+
+NOTICE! Perform all the operations in this exact order.
+
+#### Exercise_94
+
+The Account from the previous exercise class is also available in this exercise.
+
+Write a program that:
+
+- Creates an account named "Heikki's account" with the balance 1000.0
+- Creates an account named "Personal account" with the balance 0
+- Withdraws 100.0 from Heikki's account
+- Deposits 100.0 to its own personal account
+- Prints account information (ToString) on both, first Heikki's, then Personal:
+
+```console
+Heikki's account balance: 900
+Personal account balance: 100
+```
+
+#### Exercise_95
+
+In this exercise, you'll practice creating a class.
+
+[**CHECK THIS MATERIAL FOR HELP**](https://centria.github.io/basic-coding/part4/1/#creating-a-new-class)
+
+Name the class **Dog** (and the file **Dog.cs**)
+
+You have now created a class called **Dog**. 
+Add the variables 
+- private string name,
+- private string breed and 
+- private int age   
+to the class. As a class diagram, the class looks like this:
+
+![Dog class diagram](https://github.com/centria/coding-exercises/raw/master/assets/images/dogclass.jpg)
+
+NOTICE! You have to give your dog **namespace exercise_95** for it to function!
+
+#### Exercise_96
+
+Create a class named **Room** (and file **Room.cs**). Add the variables **private string code** and **private int seats** to the class. Then create a constructor **public Room(string classCode, int numberOfSeats)** through which values are assigned to the instance variables.
+
+![Room class diagram](https://github.com/centria/coding-exercises/raw/master/assets/images/roomclass.jpg)
+
+NOTICE! You have to give your room **namespace exercise_96** for it to function!
