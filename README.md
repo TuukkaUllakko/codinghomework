@@ -2487,3 +2487,396 @@ Method **public int Multiply(int number)** which returns the value number passed
 You also need to create an instance variable in this exercise.
 
 An example of the class in use:
+
+```cs
+public static void Main(string[] args)
+{
+  Multiplier multiplyByThree = new Multiplier(3);
+
+  Console.WriteLine("multiplyByThree.Multiply(2): " + multiplyByThree.Multiply(2));
+
+  Multiplier multiplyByFour = new Multiplier(4);
+
+  Console.WriteLine("multiplyByFour.Multiply(2): " + multiplyByFour.Multiply(2));
+  Console.WriteLine("multiplyByThree.Multiply(1): " + multiplyByThree.Multiply(1));
+  Console.WriteLine("multiplyByFour.Multiply(1): " + multiplyByFour.Multiply(1));
+}
+```
+
+```console
+multiplyByThree.Multiply(2): 6
+multiplyByFour.Multiply(2): 8
+multiplyByThree.Multiply(1): 6
+multiplyByFour.Multiply(1): 8
+```
+
+#### Exercise_105
+
+The exercise template includes class **Statistics**
+
+```cs
+namespace exercise_105
+{
+  public class Statistics
+  {
+    public int count {get; set;}
+    public int sum { get; set; }
+
+    public NumberStatistics()
+    {
+      // initialize the variable count here
+    }
+
+    public void AddNumber(int number) {
+        // write code here
+    }
+  }
+}
+```
+
+The following program introduces the class' use:
+
+```cs
+Statistics statistics = new Statistics();
+statistics.AddNumber(3);
+statistics.AddNumber(5);
+statistics.AddNumber(1);
+statistics.AddNumber(2);
+Console.WriteLine("Count: " + statistics.count);
+Console.WriteLine("Sum: " + statistics.sum);
+```
+
+```console
+Count: 4
+Sum: 11
+```
+
+Expand the program as follows:
+- When a number is added, **count** is increased by one
+- When a number is added, **sum** is increased by the number's value
+
+#### Exercise_106
+
+In this exercise series, a class called PaymentCard is created which aims to mimic a cafeteria's payment process.
+
+The template includes the **Program.cs** file. You have to create the **PaymentCard.cs** yourself.
+
+- Add a new class to the project called **PaymentCard** (by creating the file mentioned above).
+- Create the PaymentCard object's constructor, which is passed the opening balance of the card, and which then stores that balance in the object's internal variable. 
+- Write the ToString method, which will return the card's balance in the form **"The card has a balance of X euros"**.
+
+Here is the template for the PaymentCard:
+
+```cs
+namespace exercise_106
+{
+  public class PaymentCard
+  {
+    private double balance;
+
+    public PaymentCard(double openingBalance)
+    {
+      // write code here
+    }
+
+    public override string ToString()
+    {
+      // write code here
+    }
+  }
+}
+```
+The following main program tests the class:
+
+```cs
+public static void Main(string[] args)
+{
+  PaymentCard card = new PaymentCard(50);
+  Console.WriteLine(card);
+}
+```
+
+```console
+The card has a balance of 50 euros
+```
+
+#### Exercise_107
+
+Expand your answer from the exercise 106 by adding two methods:
+- Method **public void EatLunch()**
+- Method **public void DrinkCoffee()**
+
+The method **EatLunch** should decrease the card's balance by 10.60 euros. The method **DrinkCoffee** should decrease the card's balance by 2.0 euros.
+
+The following main program tests the class:
+
+```cs
+public static void Main(string[] args)
+{
+  PaymentCard card = new PaymentCard(50);
+  Console.WriteLine(card);
+
+  card.EatLunch();
+  Console.WriteLine(card);
+  
+  card.DrinkCoffee();
+  Console.WriteLine(card);
+}
+```
+
+```console
+The card has a balance of 50 euros
+The card has a balance of 39.4 euros
+The card has a balance of 37.4 euros
+```
+
+#### Exercise_108
+
+Expand your previous answers, so that when an item is bought the balance is checked. If there is not enough money to buy, the balance does not change.
+
+```cs
+public static void Main(string[] args)
+{
+  PaymentCard card = new PaymentCard(10);
+  Console.WriteLine(card);
+
+  card.EatLunch();
+  Console.WriteLine(card);
+  
+  card.DrinkCoffee();
+  Console.WriteLine(card);
+}
+```
+
+```console
+The card has a balance of 10 euros
+The card has a balance of 10 euros
+The card has a balance of 8 euros
+```
+
+Notice how EatLunch did not change the balance, as there was not enough money. DrinkCoffee still worked, as it should.
+
+#### Exercise_109
+
+Expand your previous answers, so that you can charge money on your card:
+
+```cs
+public void AddMoney(double amount) {
+    // write code here
+}
+```
+
+The purpose of the method is to increase the card's balance by the amount of money given as a parameter. However, the card's balance may not exceed 150 euros. As such, if the amount to be topped up exceeds this limit, the balance should, in any case, become exactly 150 euros.
+
+The following main program tests the class:
+
+```cs
+public static void Main(string[] args)
+{
+  PaymentCard card = new PaymentCard(100);
+  Console.WriteLine(card);
+
+  card.AddMoney(49.99);
+  Console.WriteLine(card);
+
+  card.AddMoney(10000.0);
+  Console.WriteLine(card);
+
+  card.AddMoney(-10);
+  Console.WriteLine(card);
+}
+```
+
+```console
+The card has a balance of 100 euros
+The card has a balance of 149.99 euros
+The card has a balance of 150 euros
+The card has a balance of 150 euros
+```
+
+Notice! You cannot add negative money!
+
+## Objects in list
+
+#### Exercise_110
+
+Implement the class **Main** described here. **Do not modify the class Item.**
+
+Write a program that reads names of items from the user. If the name is empty, the program stops reading. Otherwise, the given name is used to create a new item, which you will then add to the items list.
+
+Having read all the names, print all the items by using the ToString method of the Item class. The implementation of the Item class keeps track of the time of creation, in addition to the name of the item.
+
+Example print:
+```console
+Name: Hammer
+Name: Radio
+Name: Hot Potato
+Name: 
+
+Hammer (created at: 9.2.2020 13.48.16)
+Radio (created at: 9.2.2020 13.48.18)
+Hot Potato (created at: 9.2.2020 13.48.21)
+```
+
+#### Exercise_111
+
+The program described here should be implemented in the class Main. Do not modify the class PersonalInformation.
+
+After the user has entered the last set of details (they enter an empty first name), exit the repeat statement. 
+
+Print one empty line here for reading clarity.
+
+Then print the collected personal information so that each entered object is printed in the following format: first and last names separated by a space (you don't print the identification number). An example of the working program is given below:
+
+```console
+First name: 
+> Jean 
+Last name: 
+> Bartik 
+Identification number: 
+> 271224 
+First name: 
+> Betty 
+Last name: 
+> Holberton 
+Identification number: 
+> 070317 
+First name:
+>
+
+Jean Bartik 
+Betty Holberton
+```
+
+You can (and should) ask the identification number as a string.
+
+#### Exercise_112
+
+In the exercise template there is a ready-made class TelevisionProgram, representing a television program. The class has object variables name and duration, a constructor, and a few methods.
+
+Implement a program that begins by reading television programs from the user. When the user inputs an empty string as the name of the program, the program stops reading programs.
+
+After this the user is queried for a maximum duration. Once the maximum is given, the program proceeds to list all the programs whose duration is smaller or equal to the specified maximum duration.
+
+```console
+Name: Rick and Morty 
+Duration: 25 
+Name: Two and a Half Men 
+Duration: 30 
+Name: Love it or list it 
+Duration: 60 
+Name: House 
+Duration: 60
+Name:
+
+Program's maximum duration? 30 
+Rick and Morty, 25 minutes 
+Two and a Half Men, 30 minutes
+```
+
+#### Exercise_113
+
+This exercise is worth 2.
+
+Write a program that first reads book information from the user. The details to be asked for each book include the title, the number of pages, and the publication year. Entering an empty string as the name of the book ends the reading process.
+
+After this the user is asked for what is to be printed. If the user inputs "everything", all the details are printed: the book titles, the numbers of pages, and the publication years. However, if the user enters the string "title", only the book titles are printed. If something else than "everything" or "title" is given, the program should not print anything.
+
+- Implement the class Book.
+- Implement the functionality in the Main method.
+
+Example of how the program in Main should work:
+
+```console
+
+Title: To Kill a Mockingbird 
+Pages: 281 
+Publication year: 1960 
+Title: A Brief History of Time 
+Pages: 256 
+Publication year: 1988 
+Title: Beautiful Code 
+Pages: 593 
+Publication year: 2007 
+Title: The Name of the Wind 
+Pages: 662 
+Publication year: 2007 
+Title:
+
+What information will be printed? everything 
+To Kill a Mockingbird, 281 pages, 1960 
+A Brief History of Time, 256 pages, 1988 
+Beautiful Code, 593 pages, 2007 
+The Name of the Wind, 662 pages, 2007
+```
+
+```console
+Title: To Kill a Mockingbird 
+Pages: 281 
+Publication year: 1960 
+Title: A Brief History of Time 
+Pages: 256 
+Publication year: 1988 
+Title: Beautiful Code 
+Pages: 593 
+Publication year: 2007 
+Title: The Name of the Wind 
+Pages: 662 
+Publication year: 2007 
+Title:
+
+What information will be printed? name 
+To Kill a Mockingbird 
+A Brief History of Time 
+Beautiful Code 
+The Name of the Wind
+```
+
+## Files and reading data
+
+#### Exercise_114
+
+As a recap, a simple program of reading the input.
+
+Write a program that reads strings from the user until the user inputs the string "end". At that point, the program should print how many strings have been read. The string "end" should not be included in the number strings read. You can find some examples below of how the program works.
+
+```console
+> I 
+> have
+> a
+> feeling
+> that
+> I
+> have
+> written
+> this
+> wrong
+> before
+> end 
+11
+```
+
+```console
+> end 
+0
+```
+
+#### Exercise_115
+
+Write a program that reads strings from the user until the user inputs the string "end". As long as the input is not "end", the program should handle the input as an integer and print the cube of the number provided (i.e., number _ number _ number). Below are some sample outputs
+
+```console
+> 3 
+27 
+> -1 
+1 
+> 11 
+1331 
+> end
+```
+
+```console
+end
+```
+
+Remember to convert to integer before calculation!
