@@ -1,10 +1,18 @@
+## Where to begin
+
+Before you do this course, it is advised to do the course for command line and version control first: https://centria.github.io/console/. This gives you tools to learn how to create your own Git repository and how to use it.
+
+The course material for **this course** is at https://centria.github.io/basic-coding/. Do read the material before trying to do the exercises.
+
+To do the exercises, you need [Dotnet Core](https://dotnet.microsoft.com/download) and a decent editor, such as [Visual Studio Code](https://code.visualstudio.com/). You can use any editor, but the instructions are written with VSC in mind.
+
 ## How to run exercises
 
 In the exercise folder, run the command **dotnet run** to run your program. To see if your program does what it's supposed to, run **dotnet test**. When all the tests pass, you have done the exercise as intended.
 
 ## How to return your exercises
 
-You return your exercises by pushing your answers to your personal repository.
+You return your exercises by pushing your answers to your personal repository. The repository link is to be sent to the supervising teacher.
 
 The deadlines are every Sunday.
 
@@ -13,7 +21,7 @@ The deadlines are every Sunday.
 | 1  | 26.01.2020 at 23:59| 40        |
 | 2  | 02.02.2020 at 23:59| 31        |
 | 3  | 09.02.2020 at 23:59| 31        |
-| 4  | 16.02.2020 at 23:59| XX        |
+| 4  | 16.02.2020 at 23:59| 29        |
 | 5  | 23.02.2020 at 23:59| XX        |
 | 6  | 01.03.2020 at 23:59| XX        |
 
@@ -1794,6 +1802,14 @@ RemoveLast(strings);
 strings.ForEach(Console.WriteLine);
 ```
 
+```console
+First
+Second
+Third
+First
+```
+
+
 ## Arrays
 
 #### Exercise_78
@@ -2880,3 +2896,85 @@ end
 ```
 
 Remember to convert to integer before calculation!
+
+#### Exercise_116
+
+Write a program that prints the contents of a file called "data.txt", such that each line of the file is printed on its own line.
+
+If the file content looks like so:
+
+In a world
+Where code is built
+
+Then the program should print the following:
+
+```console
+In a world
+Where code is built
+```
+
+#### Exercise_117
+
+Write a program that asks the user for a string, and then prints the contents of a file with a name matching the string provided. You may assume that the user provides a file name that the program can find. You do not have to worry about getting errors when the file does not exist.
+
+The exercise template contains the files "data.txt" and "song.txt", which you may use when testing the functionality of your program. The output of the program can be seen below for when a user has entered the string "song.txt". The content that is printed comes from the file "song.txt". Naturally, the program should also work with other filenames, assuming the file can be found.
+
+```console
+Which file should have its contents printed? 
+> song.txt 
+
+No option for duality 
+The old is where we come 
+Clockspeed is fast, but we'll survive 
+The new will overcome 
+We are challengers, not followers 
+We take the ball to build 
+Easy safe services 
+Are here to stay
+
+Value for society 
+Value for life 
+For you and me 
+Tieto is here allright!
+```
+
+#### Exercise_118
+
+The exercise template comes ready with functionality for the guest list application. It checks whether names entered by the user are on the guest list.
+
+However, the program is missing the functionality needed for reading the guest list. Modify the program so that the names on the guest list are read from the file.
+
+Name of the file: guestlist.txt
+
+```console
+Enter names, an empty line quits. 
+> Chuck Norris 
+The name is not on the list. 
+> Jack Baluer 
+The name is not on the list. 
+> Jack Bauer 
+The name is on the list. 
+> Jack Bower 
+The name is on the list.
+>
+Thank you!
+```
+
+NOTICE! The exercise template comes with two files, names.txt and other-names.txt, which have the following contents. Do not change the contents of the files!
+
+names.txt:
+
+ada  
+arto  
+leena  
+test  
+heikki  
+   
+other-names.txt:
+  
+leo   
+jarmo   
+alicia  
+mike  
+potato  
+  
