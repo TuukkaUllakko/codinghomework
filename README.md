@@ -2732,6 +2732,8 @@ Write a program that reads names of items from the user. If the name is empty, t
 
 Having read all the names, print all the items by using the ToString method of the Item class. The implementation of the Item class keeps track of the time of creation, in addition to the name of the item.
 
+NOTICE! The list has to be called "items" for the tests to work!
+
 Example print:
 ```console
 Name: Hammer
@@ -2889,13 +2891,13 @@ Write a program that reads strings from the user until the user inputs the strin
 
 #### Exercise_115
 
-Write a program that reads strings from the user until the user inputs the string "end". As long as the input is not "end", the program should handle the input as an integer and print the cube of the number provided (i.e., number _ number _ number). Below are some sample outputs
+Write a program that reads strings from the user until the user inputs the string "end". As long as the input is not "end", the program should handle the input as an integer and print the cube of the number provided (i.e., number * number * number). Below are some sample outputs
 
 ```console
 > 3 
 27 
 > -1 
-1 
+-1 
 > 11 
 1331 
 > end
