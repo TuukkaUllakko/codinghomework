@@ -38,7 +38,7 @@ namespace exercise_113
       {
         if (input == "everything")
         {
-          Console.WriteLine(books.title + ", " + books.pages + " pages, " + books.year);
+          Console.WriteLine(books);
         }
         else if (input == "title")
         {

@@ -13,6 +13,9 @@ namespace exercise_113
             this.pages = pages;
             this.year = year;
         }
-        
+        public override string ToString()
+        {
+            return this.title + ", " + this.pages + " pages, " + this.year;
+        }
     }
 }
