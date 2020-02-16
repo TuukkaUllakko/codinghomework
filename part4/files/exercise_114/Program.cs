@@ -6,6 +6,22 @@ namespace exercise_114
     {
         public static void Main(string[] args)
         {
+            int number = 0;
+
+            while (true)
+            {
+                String input = Console.ReadLine();
+                if (input == "end")
+                {
+                    break;
+                }
+                else
+                {
+                    number++;
+                }
+            }
+
+            Console.WriteLine(number);
 
         }
     }
