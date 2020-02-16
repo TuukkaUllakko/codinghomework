@@ -8,7 +8,13 @@ namespace exercise_116
     public static void Main(string[] args)
     {
       // Read the file data.txt and print the text from it as it is
-      // You can use either File.ReadAllText or File.ReadAllLines
+      // You can use either File.ReadAllText or File.ReadAllLines'
+      String[] lines = File.ReadAllLines("data.txt");
+
+      foreach (String line in lines)
+      {
+        Console.WriteLine(line);
+      }
       
     }
   }
