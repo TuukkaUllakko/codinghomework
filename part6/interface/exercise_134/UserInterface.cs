@@ -49,6 +49,9 @@ namespace exercise_134
         Console.WriteLine();
 
         grade = grade - 1;
+        
+        Console.WriteLine(register.AverageOfGrades());
+        Console.WriteLine(register.AverageOfPoints());
       }
     }
     public static void PrintStars(int stars)
