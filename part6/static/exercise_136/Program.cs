@@ -14,8 +14,13 @@ namespace exercise_136
       HowManyNames(ada);
       HowManyNames(jack);
       HowManyNames(mike);
+      
+    }
+    public static void HowManyNames(Person person)
+    {
+      string[] parts = person.ToString().Split(" ");
+      Console.WriteLine(person.ToString() + " has " + parts.Length + " names.");
     }
 
-    // Do something here
   }
 }
