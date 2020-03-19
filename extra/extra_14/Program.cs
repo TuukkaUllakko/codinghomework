@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace extra_14
 {
@@ -7,7 +8,8 @@ namespace extra_14
     public static void Main(string[] args)
     {
       // Add your code here:
-
+      string text = File.ReadAllText("text.txt");
+      Console.WriteLine(text);
     }
   }
 }
