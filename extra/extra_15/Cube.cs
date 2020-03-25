@@ -15,7 +15,7 @@ namespace extra_15
             this.volume = this.edgeLength * this.edgeLength * this.edgeLength;
             return this.volume;
         }
-        public override string ToString()
+        public override string ToString() //String representation for object
         {
             return "The length of the edge is " + this.edgeLength + " and the volume " + Volume();
         }
