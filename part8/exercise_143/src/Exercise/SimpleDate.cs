@@ -38,14 +38,24 @@ namespace Exercise
 
     public override bool Equals(object compared)
     {
-      // DO SOMETHING HERE
-      return false;
+      if (this == compared)
+      {
+        return true;
+      }
+      if ((compared == null) || !this.GetType().Equals(compared.GetType()))
+      {
+        return false;
+      }
+      else
+      {
+        SimpleDate comparedDate = (SimpleDate)compared;
+        return this.day == comparedDate.day && this.month == comparedDate.month && this.year == comparedDate.year;
+      }
     }
 
     public override int GetHashCode()
     {
-      // DO SOMETHING HERE
-      return -1;
+      return this.day + this.month + this.year.GetHashCode();
     }
   }
 }
