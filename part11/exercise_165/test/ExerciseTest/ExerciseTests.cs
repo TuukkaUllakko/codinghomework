@@ -138,9 +138,6 @@ namespace ExerciseTest
       {
         File.Delete(fileName);
       }
-<<<<<<< HEAD
-    } 
-=======
       File.CreateText(fileName).Close();
       SaveableDictionary dictionary = new SaveableDictionary(fileName);
       dictionary.Load();
@@ -155,7 +152,6 @@ namespace ExerciseTest
       File.Delete(fileName);
       Assert.AreEqual(content, code.Replace("\r\n", "\n"), "Saving translations to a file should work!");
     }
->>>>>>> fbdf5b310c7cf8aa4be7a342c3b0fe087d69a8b7
 
   }
 }
