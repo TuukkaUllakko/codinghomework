@@ -148,7 +148,7 @@ namespace ExerciseTest
         File.Delete("savefile.txt");
         Assert.AreEqual(content, code.Replace("\r\n", "\n"), "Saving translations to a file should work!");
       }
-    }
+    } 
 
   }
 }
