@@ -16,7 +16,7 @@ namespace Exercise
     {
       // generate a random number which may be any number
       // between one and the number of faces, and then return it
-      int randomSideValue = this.random.Next(1, numberOfFaces);
+      int randomSideValue = this.random.Next(1, numberOfFaces + 1);
       return randomSideValue;
     }
   }
